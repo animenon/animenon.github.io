@@ -1,123 +1,333 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Anirudh Menon</title>
+    <title>Anirudh Menon - AI/ML Engineer & Data Scientist</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Anirudh Menon - AI/ML Engineer and Data Scientist specializing in big data, machine learning, and solving interesting problems in retail and marketing.">
+    <meta name="keywords" content="AI, Machine Learning, Data Science, Big Data, Python, Apache Spark, Data Engineering">
+    <meta name="author" content="Anirudh Menon">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://animenon.me/">
+    <meta property="og:title" content="Anirudh Menon - AI/ML Engineer & Data Scientist">
+    <meta property="og:description" content="AI/ML Engineer and Data Scientist specializing in big data, machine learning, and solving interesting problems in retail and marketing.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://animenon.me/">
+    <meta property="twitter:title" content="Anirudh Menon - AI/ML Engineer & Data Scientist">
+    <meta property="twitter:description" content="AI/ML Engineer and Data Scientist specializing in big data, machine learning, and solving interesting problems in retail and marketing.">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-        /* Remove the navbar's default margin-bottom and rounded borders */
-        .navbar {
-            margin-bottom: 0;
-            border-radius: 0;
-        }
-
-        /* Add a gray background color and some padding to the footer */
-        footer {
-            background-color: #f2f2f2;
-            padding: 25px;
+        /* Add padding for fixed navbar */
+        body {
+            padding-top: 70px;
         }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+<script>
+// Smooth scrolling for anchor links
+$(document).ready(function(){
+    $('a[href^="#"]').on('click', function(event) {
+        var target = $(this.getAttribute('href'));
+        if( target.length ) {
+            event.preventDefault();
+            $('html, body').stop().animate({
+                scrollTop: target.offset().top - 70
+            }, 800);
+        }
+    });
+    
+    // Close mobile menu after clicking a link
+    $('.navbar-collapse a').click(function(){
+        $(".navbar-collapse").collapse('hide');
+    });
+});
+</script>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">
-                <!--<img src="assets/home.png" alt="Anirudh's Page"  width="32" height="32" /> -->
-            </a>
+            <a class="navbar-brand" href="index.html">Anirudh Menon</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
-<!--            <ul class="nav navbar-nav">-->
-<!--                <li class="active"><a href="#">Home</a></li>-->
-<!--                <li><a href="#">About</a></li>-->
-<!--                <li><a href="#">Projects</a></li>-->
-<!--                <li><a href="#">Slides</a></li>-->
-<!--            </ul>-->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contributions">Contributions</a></li>
+                <li><a href="slides.html">Slides</a></li>
+            </ul>
         </div>
     </div>
 </nav>
 
+<!-- Hero Section -->
 <div class="jumbotron">
-    <div class="container text-center">
+    <div class="container text-center fade-in-up">
         <h1>Anirudh Menon</h1>
-        <p>AI/ML Engineer and Scientist</p>
+        <p class="lead">AI/ML Engineer & Data Scientist</p>
     </div>
-    <div class="container" >
-        <p style="text-align:center;">
-            A Computer Engineer with a Masters in Data Sciences, mostly working on solving interesting data problems.<br />
-            An active contributor to the open source community, have contributed to many of the Apache projects.<br />
-            Have hosted and been part of many meet-ups and conferences about Big Data, Data Sciences and Python.
+    <div class="container text-center" style="margin-top: 25px;">
+        <p class="fade-in-up" style="max-width: 800px; margin: 0 auto; color: rgba(255,255,255,0.95);">
+            Building ML/AI systems in retail to improve supply chain, guest experience and profitability.
         </p>
-        <p style="text-align:center;">
-            Been curious about artificial intelligence and currently working on solving problems in retail and marketing using
-            statistical and machine learning techniques.
-        </p>
+        <div class="mt-4">
+            <a href="#about" class="btn btn-default" style="border-radius: 24px; padding: 10px 22px;">Learn more</a>
+        </div>
     </div>
 </div>
 
-<div class="container-fluid bg-3 text-center">
-    <h3>Some of my Work & Contributions</h3><br>
-    <div class="row">
-        <div class="col-sm-4">
-            <p>techfaqs</p>
-            <a href="https://github.com/techfaqs/Tech-FAQs.git">Beginner documentation of some tech topics</a>
-        </div>
-        <div class="col-sm-4">
-            <p>India - Covid19 Map</p>
-            <a href="https://animenon.me/covid19_india/">India - Covid19 Numbers</a>
-        </div>
-        <div class="col-sm-4">
-            <p>csv-config-parser</p>
-            <a href="https://github.com/animenon/csv-config-parser">Parser to get values from a CSV config file.</a>
+            <!-- About Section -->
+            <section id="about" class="section bg-white-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-10 col-md-offset-1">
+                            <h2 class="section-title text-center">About</h2>
+                            <p class="fade-in-up" style="margin-top: 30px; color: #555;">
+                                ML Engineer with 11+ years of experience across retail, automobile, and entertainment industries. I design and build ML/data pipelines and products that drive measurable impact. I’ve led mid-sized teams delivering end-to-end ML workflows, and served as a people manager for data engineers, scientists, and analysts. I contribute actively to solution design, architecture, model development, and production delivery of AI systems.
+                            </p>
+                            <p style="margin-top: 20px; color: #555;">
+                                I enjoy contributing to FOSS, am an active member of local data and Python communities, a regular Stack Overflow contributor, and a frequent speaker at meetups and conferences. Hackathons are my happy place—from problem understanding and ideation to architecture and implementation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Skills & Technologies -->
+                <div class="container" style="margin-top: 30px;">
+                    <h3 class="text-center" style="color: #2c3e50; font-weight: 600;">Skills & Technologies</h3>
+                    <div class="row" style="margin-top: 25px;">
+                        <div class="col-md-12 text-center">
+                            <span class="label label-primary" style="margin: 6px;">Python</span>
+                            <span class="label label-primary" style="margin: 6px;">Apache Spark</span>
+                            <span class="label label-primary" style="margin: 6px;">ML Engineering</span>
+                            <span class="label label-primary" style="margin: 6px;">Deep Learning</span>
+                            <span class="label label-primary" style="margin: 6px;">MLOps</span>
+                            <span class="label label-primary" style="margin: 6px;">Data Engineering</span>
+                            <span class="label label-primary" style="margin: 6px;">Statistical Modeling</span>
+                            <span class="label label-primary" style="margin: 6px;">Retail AI</span>
+                            <span class="label label-primary" style="margin: 6px;">MarTech</span>
+                            <span class="label label-primary" style="margin: 6px;">Supply Chain</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+<!-- Projects Section -->
+<section id="projects" class="section bg-light-section">
+    <div class="container text-center">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-md-4 col-sm-6">
+                <div class="project-card">
+                    <h4>Tech FAQs</h4>
+                    <p style="color: #666; margin-bottom: 20px;">Beginner-friendly documentation covering various technical topics to help developers get started quickly.</p>
+                    <a href="https://github.com/techfaqs/Tech-FAQs.git" target="_blank">View on GitHub →</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="project-card">
+                    <h4>India Covid-19 Dashboard</h4>
+                    <p style="color: #666; margin-bottom: 20px;">Interactive visualization dashboard tracking Covid-19 statistics across India with real-time data updates.</p>
+                    <a href="https://animenon.me/covid19_india/" target="_blank">Visit Dashboard →</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="project-card">
+                    <h4>CSV Config Parser</h4>
+                    <p style="color: #666; margin-bottom: 20px;">Python utility library for parsing and extracting configuration values from CSV files efficiently.</p>
+                    <a href="https://github.com/animenon/csv-config-parser" target="_blank">View on GitHub →</a>
+                </div>
+            </div>
         </div>
     </div>
-</div><br>
+</section>
 
-<div class="container-fluid bg-3 text-center">
-    <div class="row">
-        <div class="col-sm-4">
-            <p>Stack Overflow</p>
-            <a href="https://stackoverflow.com/users/2142994" style="white-space:nowrap;">
-                <img src="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico" class="img-responsive"  align="left" alt="Image" />
-                Where Developers Learn, Share,<br .> & Build Careers
+<!-- Experience Section -->
+<section id="experience" class="section bg-light-section">
+    <div class="container">
+        <h2 class="section-title text-center">Experience</h2>
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-md-10 col-md-offset-1">
+                <!-- Company: Target -->
+                <div class="project-card">
+                    <h4 style="margin-bottom: 10px;">Target</h4>
+                    <p style="color:#777; margin-bottom: 10px;">6 years 2 months · Bengaluru, India</p>
+                    <div style="margin-bottom:10px;">
+                        <a href="#target-supply-chain" class="label label-primary" style="margin-right:8px;">Lead AI Engineer (Supply Chain)</a>
+                        <a href="#target-martech" class="label label-default">Lead AI Engineer, Data Sciences (MarTech)</a>
+                    </div>
+                    <div id="target-supply-chain" style="margin-top: 12px;">
+                        <p style="margin-bottom: 6px;"><strong>Lead AI Engineer (Supply Chain)</strong> — Apr 2025 – Present</p>
+                        <p style="color:#555;">Built ML/AI solutions in retail to improve guest experience and profitability. Led ML science and engineering initiatives end-to-end.</p>
+                    </div>
+                    <div id="target-martech" style="margin-top: 12px;">
+                        <p style="margin-bottom: 6px;"><strong>Lead AI Engineer, Data Sciences (MarTech)</strong> — Nov 2019 – Mar 2025</p>
+                        <p style="color:#555;">Owned MarTech ML workflows from data ingestion to model deployment, focusing on personalization and marketing effectiveness.</p>
+                    </div>
+                </div>
+
+                <!-- Company: Genpact Digital -->
+                <div class="project-card">
+                    <h4 style="margin-bottom: 10px;">Genpact Digital</h4>
+                    <div>
+                        <a href="#genpact-am" class="label label-primary">Assistant Manager (Big Data & Analytics)</a>
+                    </div>
+                    <div id="genpact-am" style="margin-top: 12px;">
+                        <p style="color:#777; margin-bottom: 6px;">Jun 2017 – Nov 2019</p>
+                        <p style="color:#555;">Built data and ML pipelines for a global media & entertainment leader. Led and trained a team to build efficient pipelines.</p>
+                    </div>
+                </div>
+
+                <!-- Company: Capgemini (includes IGate) -->
+                <div class="project-card">
+                    <h4 style="margin-bottom: 10px;">Capgemini (formerly IGate)</h4>
+                    <div style="margin-bottom:10px;">
+                        <a href="#capgemini-tech-lead" class="label label-primary" style="margin-right:8px;">Technical Lead</a>
+                        <a href="#capgemini-sr-bde" class="label label-default" style="margin-right:8px;">Senior Big Data Engineer</a>
+                        <a href="#capgemini-se" class="label label-default">Software Engineer (IGate IV3)</a>
+                    </div>
+                    <div id="capgemini-tech-lead" style="margin-top: 12px;">
+                        <p style="margin-bottom: 6px;"><strong>Technical Lead</strong> — Dec 2016 – Jun 2017</p>
+                        <p style="color:#555;">Led data pipeline development for a major automobile manufacturer; explored data science techniques to generate insights.</p>
+                    </div>
+                    <div id="capgemini-sr-bde" style="margin-top: 12px;">
+                        <p style="margin-bottom: 6px;"><strong>Senior Big Data Engineer</strong> — Aug 2015 – Dec 2016</p>
+                        <p style="color:#555;">Delivered big data solutions for oil and mining; data engineering and statistical analysis.</p>
+                    </div>
+                    <div id="capgemini-se" style="margin-top: 12px;">
+                        <p style="margin-bottom: 6px;"><strong>Software Engineer (IGate IV3 Platform)</strong> — Jul 2014 – Aug 2015</p>
+                        <p style="color:#555;">Worked on data engineering and some NLP for the IGate IV3 platform.</p>
+                    </div>
+                </div>
+
+                <!-- Company: Accure Inc. -->
+                <div class="project-card">
+                    <h4 style="margin-bottom: 10px;">Accure Inc.</h4>
+                    <div>
+                        <a href="#accure-intern" class="label label-primary">Big Data Intern</a>
+                    </div>
+                    <div id="accure-intern" style="margin-top: 12px;">
+                        <p style="color:#777; margin-bottom: 6px;">Jan 2014 – Jun 2014</p>
+                        <p style="color:#555;">Developed components for Accure Distribution of Hadoop (ADH).</p>
+                    </div>
+                </div>
+
+                <!-- Company: ICAR -->
+                <div class="project-card">
+                    <h4 style="margin-bottom: 10px;">National Bureau of Soil Survey & Land Use Planning (ICAR)</h4>
+                    <div>
+                        <a href="#icar-intern" class="label label-primary">Intern</a>
+                    </div>
+                    <div id="icar-intern" style="margin-top: 12px;">
+                        <p style="color:#777; margin-bottom: 6px;">Jan 2013 – Feb 2013</p>
+                        <p style="color:#555;">Server scripting in PHP.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="section bg-white-section">
+    <div class="container text-center">
+        <h2 class="section-title">Education</h2>
+        <div class="row" style="margin-top: 30px;">
+            <div class="col-md-6">
+                <div class="project-card">
+                    <h4>Birla Institute of Technology and Science, Pilani</h4>
+                    <p style="color:#555;">Masters — Data Science & Engineering</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="project-card">
+                    <h4>S J C Institute Of Technology, Karnataka</h4>
+                    <p style="color:#555;">Bachelor of Engineering — Computer Science & Engineering</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contributions Section -->
+<section id="contributions" class="section bg-white-section">
+    <div class="container text-center">
+        <h2 class="section-title">Contributions & Community</h2>
+        <div class="row" style="margin-top: 40px;">
+            <div class="col-md-4 col-sm-6">
+                <div class="project-card">
+                    <h4>
+                        <img src="https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico" alt="Stack Overflow" />
+                        Stack Overflow
+                    </h4>
+                    <p style="color: #666; margin-bottom: 20px;">Active contributor helping developers solve problems and share knowledge across the community.</p>
+                    <a href="https://stackoverflow.com/users/2142994" target="_blank">View Profile →</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="project-card">
+                    <h4>Technical Articles</h4>
+                    <p style="color: #666; margin-bottom: 20px;">Writing about software engineering best practices, versioning conventions, and development workflows.</p>
+                    <a href="https://www.linkedin.com/pulse/software-versioning-convention-anirudh-menon" target="_blank">Read Articles →</a>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="project-card">
+                    <h4>Learning Projects</h4>
+                    <p style="color: #666; margin-bottom: 20px;">Hands-on learning repositories exploring testing frameworks and machine learning libraries.</p>
+                    <div>
+                        <a href="https://github.com/animenon/pytest_learning" target="_blank">Pytest</a>
+                        <span style="margin: 0 10px;">|</span>
+                        <a href="https://github.com/animenon/pyspark_mllib" target="_blank">Apache Spark MLLib</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Slides CTA Section -->
+<section class="slides-cta text-center">
+    <div class="container">
+        <p style="font-size: 1.3rem; margin-bottom: 10px;">Want to check out my slides from conferences and talks?</p>
+        <a href="slides.html">
+            View Slides 
+            <img src="assets/slides.png" alt="Slides" width="24" height="24" />
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center">
+    <div class="container">
+        <h3 style="margin-bottom: 25px; font-weight: 300;">Let's Connect</h3>
+        <div style="margin-bottom: 20px;">
+            <a href="https://www.linkedin.com/in/animenon/" target="_blank" title="LinkedIn">
+                <img src="assets/linkedin.png" alt="LinkedIn" width="40" height="40" />
+            </a>
+            <a href="mailto:hello@animenon.me" title="Email" style="margin: 0 20px;">
+                <img src="assets/mail.png" alt="Email" width="40" height="40" />
+            </a>
+            <a href="https://twitter.com/anikmenon" target="_blank" title="Twitter">
+                <img src="assets/twitter.png" alt="Twitter" width="40" height="40" />
             </a>
         </div>
-        <div class="col-sm-4">
-            <p>Articles</p>
-            <a href="https://www.linkedin.com/pulse/software-versioning-convention-anirudh-menon">Software Versioning Convention</a>
-
-        </div>
-        <div class="col-sm-4">
-            <p>Learning projects</p>
-            <a href="https://github.com/animenon/pytest_learning">Pytest</a>&nbsp;&nbsp;
-            <span>|</span>&nbsp;&nbsp;&nbsp;
-            <a href="https://github.com/animenon/pyspark_mllib">Apache Spark MLLib (in python)</a>&nbsp;&nbsp;
-            <span>|</span>&nbsp;&nbsp;&nbsp;
-        </div>
+        <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.8;">
+            © 2025 Anirudh Menon. All rights reserved.
+        </p>
     </div>
-</div><br>
-<hr />
-<div class="container-fluid text-center">
-    Wanna checkout some of my slides from conferences and talks?
-    <a href="slides.html">Slides <img src="assets/slides.png" alt="Goto slides page!"  width="24" height="24" /></a>
-</div>
-<br>
-
-<footer class="container-fluid text-center">
-    <p>
-        <a href="https://www.linkedin.com/in/animenon/"><img src="assets/linkedin.png" alt="Linkedin" width="32" height="32" /></a>
-        &nbsp; <a href="mailto:hello@animenon.me"><img src="assets/mail.png" alt="Send a mail!"  width="32" height="32" /></a>
-        &nbsp; <a href="https://twitter.com/anikmenon"><img src="assets/twitter.png" alt="twitter"  width="32" height="32" /></a>
-    </p>
 </footer>
 
 </body>
